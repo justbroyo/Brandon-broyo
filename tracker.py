@@ -1,7 +1,7 @@
-# Initialize an empty dictionary to store expenses
+# Initialize an empty dictionary to store user expenses
 expenses = {}
 
-# Function to handle menu actions based on the user's choice
+# This codes for being able to control which feature will be selected
 def handle_action(choice, expense_id_counter):
     # Option 1: Add a new expense
     if choice == '1':
@@ -9,13 +9,13 @@ def handle_action(choice, expense_id_counter):
         amount = float(input("Enter the amount: $"))  # Ask for the amount and convert it to float
         date = input("Enter the date (YYYY-MM-DD): ")  # Ask for the date
         
-        # Add the new expense to the dictionary with a unique expense ID
+        # Add the new expense to the dictionary with an expense ID
         expenses[expense_id_counter] = {'category': category, 'amount': amount, 'date': date}
         print(f"Expense {expense_id_counter} added.")  # Notify the user that the expense was added
         
-        return expense_id_counter + 1  # Increment the counter to ensure unique ID for the next expense
+        return expense_id_counter + 1  # Increment the counter to ensure expense ID for the next expense
     
-    # Option 2: View all expenses
+    # Option 2: code for viewing all the expenses. 
     elif choice == '2':
         if expenses:  # Check if there are any expenses in the dictionary
             # Loop through each expense and print its details
